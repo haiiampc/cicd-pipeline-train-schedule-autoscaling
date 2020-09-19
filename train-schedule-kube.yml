@@ -10,9 +10,7 @@ spec:
   - protocol: TCP
     port: 8080
     nodePort: 8080
-
 ---
-
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
@@ -42,11 +40,9 @@ spec:
           timeoutSeconds: 1
           periodSeconds: 10
         resources:
-         requests:
-          cpu: 200m
-  
-  ---
-
+          requests:
+            cpu: 200m
+---
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
